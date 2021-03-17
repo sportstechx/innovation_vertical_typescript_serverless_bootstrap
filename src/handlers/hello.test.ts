@@ -1,6 +1,6 @@
 import { hello } from '@/handlers/hello'
 
-describe('Complete Checkout Function', () => {
+describe('Hello Function', () => {
   it('should return dummy message', async () => {
     const response = await hello()
     const body = JSON.parse(response.body)
