@@ -1,5 +1,5 @@
 import middy from 'middy'
-import { jsonBodyParser, httpEventNormalizer } from 'middy/middlewares'
+import { jsonBodyParser, httpEventNormalizer, httpErrorHandler } from 'middy/middlewares'
 import { APIGatewayProxyResult } from 'aws-lambda'
 
 /**
@@ -24,6 +24,7 @@ async function hello (): Promise<APIGatewayProxyResult> {
 const handler = middy(hello)
   .use(jsonBodyParser())
   .use(httpEventNormalizer())
+  .use(httpErrorHandler())
 
 export {
   handler,

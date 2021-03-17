@@ -22,6 +22,8 @@
   },
   "scripts": {
     "docs": "esdoc",
+    "deploy:sandbox": "sls deploy --stage sandbox --region eu-west-1",
+    "remove:sandbox": "sls remove --stage sandbox --region eu-west-1",
     "lint": "standardx **/*.ts --env jest | standard-reporter --stylish",
     "lint:fix": "standardx **/*.ts --env jest --fix",
     "test": "jest --coverage",
