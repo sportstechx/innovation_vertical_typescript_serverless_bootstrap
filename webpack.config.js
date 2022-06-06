@@ -9,7 +9,7 @@ module.exports = {
   output: {
     libraryTarget: 'commonjs',
     path: path.join(__dirname, './dist'),
-    filename: '[name].js',
+    filename: '[name].js'
   },
   externals: [nodeExternals()],
   mode: slsw.lib.webpack.isLocal ? 'development' : 'production',
@@ -20,26 +20,23 @@ module.exports = {
         test: /\.(tsx?)$/,
         loader: 'ts-loader',
         include: [
-          path.resolve(__dirname, 'src'),
+          path.resolve(__dirname, 'src')
         ],
         exclude: [
           [
             path.resolve(__dirname, 'node_modules'),
             path.resolve(__dirname, '.serverless'),
-            path.resolve(__dirname, '.webpack'),
-          ],
+            path.resolve(__dirname, '.webpack')
+          ]
         ],
         options: {
           transpileOnly: true,
-          experimentalWatchApi: true,
-        },
-      },
+          experimentalWatchApi: true
+        }
+      }
     ]
   },
   resolve: {
-    extensions: ['.ts', '.tsx'],
-    alias: {
-      '@': path.join(__dirname, 'src')
-    }
+    extensions: ['.ts', '.tsx']
   }
 }

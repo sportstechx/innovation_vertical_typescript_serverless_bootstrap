@@ -1,6 +1,4 @@
   environment: ${file(config/environments/${opt:stage, 'sandbox'}.yml)}
-  newRelic:
-    ${self:custom.environment.newrelic}
   webpack:
     webpackConfig: ./webpack.config.js
     includeModules: true

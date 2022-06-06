@@ -1,4 +1,4 @@
 - Effect: Allow
   Action: ssm:GetParameter
   Resource:
-    - "arn:aws:ssm:#{AWS::Region}:#{AWS::AccountId}:parameter/*"
+    - "arn:aws:ssm:${aws:regionId}:${aws:accountId}:parameter/*"

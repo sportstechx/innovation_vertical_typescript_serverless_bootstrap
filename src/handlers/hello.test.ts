@@ -1,4 +1,4 @@
-import { hello } from '@/handlers/hello'
+import { hello } from 'src/handlers/hello'
 
 describe('Hello Function', () => {
   it('should return dummy message', async () => {

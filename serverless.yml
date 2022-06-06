@@ -8,13 +8,11 @@ custom:
   ${file(config/custom.yml)}
 
 plugins:
-  - serverless-pseudo-parameters
   - serverless-webpack
-  - serverless-newrelic-lambda-layers
-  
+
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs16.x
   region: eu-west-1
   stage: ${opt:stage, 'sandbox'}
   iamRoleStatements:
