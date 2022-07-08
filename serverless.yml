@@ -14,8 +14,10 @@ provider:
   runtime: nodejs16.x
   region: eu-west-1
   stage: ${opt:stage, 'sandbox'}
-  iamRoleStatements:
-    ${file(config/role-statements/common.yml)}
+  iam:
+    role:
+      statements:
+        ${file(config/role-statements/common.yml)}
 
 functions:
   - ${file(config/functions/hello.yml)}
