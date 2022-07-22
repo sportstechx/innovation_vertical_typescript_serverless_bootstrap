@@ -4,17 +4,14 @@ module.exports = {
   resetModules: true,
   restoreMocks: true,
   roots: [
-    '<rootDir>/src/'
+    '<rootDir>/tests/'
   ],
   testEnvironment: 'node',
   verbose: true,
   collectCoverageFrom: [
-    'src/**',
-    '!src/@types/**',
-    '!**/*.test.ts',
-    '!**/*.spec.ts'
+    'src/**'
   ],
-  coverageDirectory: 'test-results',
+  coverageDirectory: 'tests/test-results',
   reporters: ['default'],
   moduleNameMapper: {
     '@/(.*)$': '<rootDir>/src/$1'

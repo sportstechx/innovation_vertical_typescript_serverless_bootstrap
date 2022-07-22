@@ -2,3 +2,4 @@
   webpack:
     webpackConfig: ./webpack.config.js
     includeModules: true
+    excludeFiles: src/**/*.test.ts
