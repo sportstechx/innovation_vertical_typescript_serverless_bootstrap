@@ -1,4 +1,0 @@
-- Effect: Allow
-  Action: ssm:GetParameter
-  Resource:
-    - "arn:aws:ssm:${aws:region}:${aws:accountId}:parameter/*"

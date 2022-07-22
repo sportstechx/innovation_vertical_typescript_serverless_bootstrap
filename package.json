@@ -9,8 +9,8 @@
     "node": "^16"
   },
   "scripts": {
-    "deploy:sandbox": "sls deploy --stage sandbox --region eu-west-1",
-    "remove:sandbox": "sls remove --stage sandbox --region eu-west-1",
+    "deploy:sandbox": "sls deploy --stage sandbox --aws-profile serverless-deployment-profile",
+    "remove:sandbox": "sls remove --stage sandbox --aws-profile serverless-deployment-profile",
     "lint": "ts-standard",
     "lint:fix": "ts-standard --fix",
     "test": "jest --coverage",
@@ -23,6 +23,7 @@
     "jest": "28.1.0",
     "jest-junit": "13.2.0",
     "serverless": "3.19.0",
+    "serverless-deployment-bucket": "1.6.0",
     "serverless-webpack": "5.7.1",
     "ts-jest": "28.0.4",
     "ts-loader": "9.3.0",

@@ -8,16 +8,20 @@ custom:
 
 plugins:
   - serverless-webpack
+  - serverless-deployment-bucket
 
 provider:
   name: aws
   runtime: nodejs16.x
-  region: eu-west-1
+  region: eu-central-1
   stage: ${opt:stage, 'sandbox'}
+  deploymentBucket:
+    name: ${self:custom.environment.aws.deploymentBucket}
+    serverSideEncryption: AES256
   iam:
-    role:
-      statements:
-        ${file(config/role-statements/common.yml)}
+    # TODO: remove deployment role after template is done. The CI user will have this role
+    deploymentRole: arn:aws:iam::${self:custom.environment.aws.accountId}:role/serverless-deployment
+    role: arn:aws:iam::${self:custom.environment.aws.accountId}:role/serverless-lambda-execution-role
 
 functions:
   - ${file(config/functions/hello.yml)}

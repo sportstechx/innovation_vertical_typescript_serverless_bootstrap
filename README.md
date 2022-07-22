@@ -10,7 +10,6 @@ Bootstrap project for all serverless projects written in TypeScript
 - [Jest](https://jestjs.io/)
 - [Standard JS](https://standardjs.com/)
 - [EditorConfig](https://editorconfig.org/)
-- [NewRelic](https://newrelic.com/)
 
 ## Setup Instructions
 
