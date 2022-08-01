@@ -9,8 +9,11 @@
     "node": "^16"
   },
   "scripts": {
-    "deploy:sandbox": "sls deploy --stage sandbox --aws-profile serverless-deployment-profile",
-    "remove:sandbox": "sls remove --stage sandbox --aws-profile serverless-deployment-profile",
+    "deploy:sandbox": "sls deploy --stage sandbox",
+    "remove:sandbox": "sls remove --stage sandbox",
+    "deploy:staging": "sls deploy --stage staging",
+    "remove:staging": "sls remove --stage staging",
+    "deploy:production": "sls deploy --stage production",
     "lint": "ts-standard",
     "lint:fix": "ts-standard --fix",
     "test": "jest --coverage",
