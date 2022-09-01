@@ -36,6 +36,7 @@
     "webpack-node-externals": "3.0.0"
   },
   "dependencies": {
+    "awilix": "7.0.3",
     "middy": "0.24.0",
     "source-map-support": "0.5.21"
   }

@@ -11,4 +11,12 @@ export class Product {
   public getId(): ProductId {
     return this.id
   }
+
+  public getName(): string {
+    return this.name
+  }
+
+  public getPrice(): ProductPrice {
+    return this.price
+  }
 }
