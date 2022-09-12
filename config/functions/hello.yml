@@ -1,8 +1,0 @@
-hello:
-  handler: src/handlers/hello.handler
-  environment:
-    stage: ${self:custom.environment.stage}
-  events:
-    - http:
-        method: get
-        path: hello

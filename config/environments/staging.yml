@@ -1,5 +1,1 @@
 stage: "staging"
-
-aws:
-  accountId: XXXXX
-  deploymentBucket: XXXXX

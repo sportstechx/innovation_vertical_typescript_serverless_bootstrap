@@ -15,16 +15,9 @@ provider:
   runtime: nodejs16.x
   region: eu-central-1
   stage: ${opt:stage, 'sandbox'}
-  deploymentBucket:
-    name: ${self:custom.environment.aws.deploymentBucket}
-    serverSideEncryption: AES256
-  iam:
-    # TODO: remove deployment role after template is done. The CI user will have this role
-    deploymentRole: arn:aws:iam::${self:custom.environment.aws.accountId}:role/serverless-deployment
-    role: arn:aws:iam::${self:custom.environment.aws.accountId}:role/serverless-lambda-execution-role
 
 functions:
-  - ${file(config/functions/hello.yml)}
+  - ${file(config/functions/create-product.yml)}
 
 resources:
   - ${file(config/resources/api-gateway.yml)}

@@ -17,7 +17,7 @@ export class CreateProductUseCase implements UseCase<string> {
       new ProductPrice(price, CurrencyType.EURO)
     )
 
-     await this.productRepository.save(product)
+    await this.productRepository.save(product)
 
     return product.getId().toString()
   }

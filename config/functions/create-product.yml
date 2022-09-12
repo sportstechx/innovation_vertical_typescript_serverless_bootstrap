@@ -1,0 +1,11 @@
+create-product:
+  handler: src/infrastructure/handlers/create-product/create-product.handler
+  environment:
+    stage: ${self:custom.environment.stage}
+  events:
+    - http:
+        method: post
+        path: product
+        request:
+          schemas:
+            application/json: ${file(src/infrastructure/json-schema/create-product-request.json)}

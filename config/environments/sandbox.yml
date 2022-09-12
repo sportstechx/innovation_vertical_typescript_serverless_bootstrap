@@ -1,5 +1,1 @@
 stage: "sandbox"
-
-aws:
-  accountId: XXXXX
-  deploymentBucket: XXXXX

@@ -1,5 +1,1 @@
 stage: "production"
-
-aws:
-  accountId: XXXXX
-  deploymentBucket: XXXXX
