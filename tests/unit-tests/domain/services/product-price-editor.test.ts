@@ -1,10 +1,10 @@
-import { container } from '../../../../src/infrastructure/dependency-injection/container'
-import { ProductPriceEditor } from '../../../../src/domain/services/product-price-editor'
-import { Product } from '../../../../src/domain/entities/product'
-import { ProductPrice } from '../../../../src/domain/value-objects/product-price'
-import { ProductId } from '../../../../src/domain/value-objects/product-id'
-import { CurrencyType } from '../../../../src/domain/value-objects/currency-type'
-import { NewPriceNotAllowed } from '../../../../src/domain/errors/new-price-not-allowed'
+import { container } from '@/infrastructure/dependency-injection/container'
+import { ProductPriceEditor } from '@/domain/services/product-price-editor'
+import { Product } from '@/domain/entities/product'
+import { ProductPrice } from '@/domain/value-objects/product-price'
+import { ProductId } from '@/domain/value-objects/product-id'
+import { CurrencyType } from '@/domain/value-objects/currency-type'
+import { NewPriceNotAllowed } from '@/domain/errors/new-price-not-allowed'
 import { MemoryProductRepository } from '@/infrastructure/repositories/memory-product-repository'
 
 jest.mock('@/infrastructure/repositories/memory-product-repository')
